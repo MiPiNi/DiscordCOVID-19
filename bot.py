@@ -30,14 +30,14 @@ async def korona_stats(ctx, country='poland'):
         zero = json_response[0]
         cases = zero['cases']
         deaths = zero['deaths']
-        await ctx.send("**" + country.capitalize() + ":" + "**")
-        await ctx.send('***Przypadki:***\n \
+        await ctx.send("**[" + country.capitalize() + "]**")
+        await ctx.send('**Przypadki:**\n \
             Nowe przypadki: {}\n \
             Obecne przypadki: {}\n \
             Przypadki krytyczne: {}\n \
             Wyleczone przypadki: {}\n \
             Wszytskie potwierdzone przypadki: {}\n \
-    ***Deduwy:***\n \
+**Deduwy:**\n \
             Nowe deduwy: {}\n \
             Laczne deduwy: {}'.format(cases['new'],
                                       cases['active'],
